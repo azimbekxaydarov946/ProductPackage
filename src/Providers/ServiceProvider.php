@@ -9,6 +9,9 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/AppProduct.php', 'AppProduct'
+        );
     }
 
     public function boot()
@@ -39,6 +42,12 @@ class ServiceProvider extends BaseServiceProvider
 
         // $this->loadSeedsFrom(__DIR__ . '/../database/seedrs');
 
+        //config
+        $this->publishes([
+            __DIR__ . '/../config/AppProduct.php' => config_path('AppProduct.php'),
+        ]);
+
+        //routes
         Route::middleware('api')
             ->prefix('api')
             ->group(__DIR__ . '/../routes/api.php');
