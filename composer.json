@@ -1,5 +1,5 @@
 {
-    "name": "package/product-micro-services",
+    "name": "azimbek/product-services",
     "type": "library",
     "description": "The product-micro-services.",
     "keywords": [
