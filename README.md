@@ -1,4 +1,4 @@
-# ProductMicroServices
+# Product Package
 
 composer require azimbek/product-services
 
