@@ -16,6 +16,12 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
+        //controller  publishes
+        // $this->publishes([
+        //     __DIR__.'/../controllers' => app_path('Http/Controllers/'),
+        // ],'controller');
+
+
         //views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ProductMicroServices');
 
@@ -28,11 +34,11 @@ class ServiceProvider extends BaseServiceProvider
             __DIR__ . '/../database/migrations' => database_path('migrations'),
         ], 'migrations');
 
-        $this->publishes([
-            __DIR__ . '/../database/migrations' => database_path('migrations'),
-            __DIR__ . '/../database/factories' => database_path('factories'),
-            __DIR__ . '/../database/seeders' => database_path('seeders'),
-        ], 'all');
+        // $this->publishes([
+        //     __DIR__ . '/../database/migrations' => database_path('migrations'),
+        //     __DIR__ . '/../database/factories' => database_path('factories'),
+        //     __DIR__ . '/../database/seeders' => database_path('seeders'),
+        // ], 'all');
 
         // //factories
 
